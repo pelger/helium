@@ -132,8 +132,6 @@ var he={};
     var tname = splt[splt.length - 1].split(".")[0];
 
     if ($("#" + tname).length > 0) {
-      //he.injectPartial(this.queue, $("#" + tname).html());
-      //he.processPartials(this.queue, callback);
       he.injectPartial(queue, $("#" + tname).html());
       he.processPartials(queue, callback);
     }
@@ -194,7 +192,6 @@ var he={};
     for (idx in he.templates) {
       var object = $("#" + idx);
       if (!he[idx]) {
-        //he.templates[idx] = he.returnTemplate.rubyMurray(template);
         he[idx] = he.executeTemplate.rubyMurray(he.templates[idx]);
       }
     }
